@@ -39,7 +39,7 @@ API Reference
 System
 ------
 
-### ping()
+### ping([callback])
 Pings the device.
 
 ```js
@@ -55,7 +55,7 @@ More information:
 * [Teledunio Uno API: ping reference](https://www.teleduino.org/documentation/api/328-full#ping)
  
 
-### getUptime()
+### getUptime([callback])
 Returns the uptime of the device in milliseconds.
 
 ```js
@@ -72,7 +72,7 @@ More information:
 * [Teledunio Uno API: getUptime reference](https://www.teleduino.org/documentation/api/328-full#getUptime)
 
 
-### getVersion()
+### getVersion([callback])
 Returns the firmware version of the device.
 
 ```js
@@ -89,7 +89,7 @@ More information:
 * [Teledunio Uno API: getVersion reference](https://www.teleduino.org/documentation/api/328-full#getVersion)
 
 
-### getFreeMemory()
+### getFreeMemory([callback])
 Returns the amount of free memory (in bytes) available on the device.
 
 ```js
@@ -105,7 +105,7 @@ myArduino.getFreeMemory(function (err, memory) {
 More information:
 * [Teledunio Uno API: getVersion reference](https://www.teleduino.org/documentation/api/328-full#getFreeMemory)
 
-### reset()
+### reset([callback])
 Resets the device, waits 15 seconds and then periodically pings the Teleduino API waiting for a response from the board. Once the board is up and running the callback will be called. If if the ping fails 5 times the callback will be called with an `Error` object.
 
 ```js
@@ -124,7 +124,7 @@ More information:
 
 ## I/O
 
-### getAllInputs(callback)
+### getAllInputs([callback])
 Returns the input values of all the digital and analog pins.
 
 ```js
@@ -141,7 +141,7 @@ More information:
 * [Teledunio Uno API: getAllInputs reference](https://www.teleduino.org/documentation/api/328-full#getAllInputs)
 
 
-### getAnalogInput(pin, callback)
+### getAnalogInput(pin, [callback])
 Gets the input on a analog pin. The callback function is passed the pin state (0=low or 1023=high)
 
 ```js
@@ -158,7 +158,7 @@ More information:
 * [Teledunio Uno API: getAnalogInput reference](https://www.teleduino.org/documentation/api/328-full#getAnalogInput)
 
 
-### getDigitalInput(pin, callback)
+### getDigitalInput(pin, [callback])
 Gets the input on a digital pin. The callback function is passed the pin state (0=low or 1=high)
 
 ```js
@@ -175,7 +175,7 @@ More information:
 * [Teledunio Uno API: getDigitalInput reference](https://www.teleduino.org/documentation/api/328-full#getDigitalInput)
 
 
-### setDigitalOutput(pin, value, expireTime, callback)
+### setDigitalOutput(pin, value, expireTime, [callback])
 Sets the output on a digital pin.
 
 ```js
@@ -192,7 +192,7 @@ More information:
 * [Teledunio Uno API: setDigitalOutput reference](https://www.teleduino.org/documentation/api/328-full#setDigitalOutput)
 
 
-### setDigitalOutputs(outputs, callback)
+### setDigitalOutputs(outputs, [callback])
  Sets the outputs of one or more digital pins.
 
 ```js
